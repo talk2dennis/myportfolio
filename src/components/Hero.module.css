@@ -1,0 +1,234 @@
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 500px;
+  background: var(--glow-ambient);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  color: var(--accent-cyan);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  margin-bottom: 1.25rem;
+}
+
+.pulseDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.highlight {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.role {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  margin: 0.75rem 0 1.25rem 0;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+.description strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast);
+}
+
+.secondaryBtn:hover {
+  border-color: var(--accent-cyan);
+}
+
+.statsStrip {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.statDivider {
+  width: 1px;
+  height: 30px;
+  background: var(--border-subtle);
+}
+
+/* Terminal Card */
+.terminalWindow {
+  background: #0f1420;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.terminalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.terminalControls {
+  display: flex;
+  gap: 6px;
+}
+
+.dotClose,
+.dotMin,
+.dotMax {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dotClose {
+  background: #ef4444;
+}
+.dotMin {
+  background: #eab308;
+}
+.dotMax {
+  background: #22c55e;
+}
+
+.terminalTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.codeSnippet {
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.codeKeyword {
+  color: #ec4899;
+}
+.codeString {
+  color: #38bdf8;
+}
+.codeBoolean {
+  color: #f59e0b;
+}
+
+@media (max-width: 960px) {
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
