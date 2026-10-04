@@ -4,6 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import styles from "./Navbar.module.css";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -46,6 +47,7 @@ export const Navbar = () => {
         </nav>
 
         <div className={styles.navActions}>
+          <ThemeToggle />
           <a
             href="https://github.com/talk2dennis"
             target="_blank"
