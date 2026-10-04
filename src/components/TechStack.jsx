@@ -93,10 +93,11 @@ export const TechStack = () => {
               <motion.div
                 key={skill.name}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.25 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.65 }}
                 className={styles.skillCard}
               >
                 <span className={styles.skillType}>{skill.type}</span>

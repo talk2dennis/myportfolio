@@ -28,10 +28,10 @@
      Motion
      ------------------------------------------------------- */
 
-  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: ease-in-out;
 
-  --transition-fast: 0.2s var(--ease-smooth);
-  --transition-normal: 0.35s var(--ease-smooth);
+  --transition-fast: 0.4s var(--ease-smooth);
+  --transition-normal: 0.95s var(--ease-smooth);
 
   /* -------------------------------------------------------
      Semantic Colors

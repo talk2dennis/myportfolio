@@ -46,6 +46,7 @@
   background: rgba(56, 189, 248, 0.1);
   color: var(--accent-primary);
   border-color: var(--border-glow);
+  transform: scale(1.05);
 }
 
 .grid {
@@ -61,14 +62,16 @@
   padding: 1.25rem 1rem;
   display: flex;
   flex-direction: column;
-  transition: all var(--transition-normal);
+  transition:
+    border-color var(--transition-normal),
+    color var(--transition-normal),
+    background-color var(--transition-normal);
 }
 
 .skillCard:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-glow);
-  transform: translate(30px);
-  box-shadow: var(--shadow-subtle);
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  background: var(--bg-primary);
 }
 
 .skillType {

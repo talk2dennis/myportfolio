@@ -10,7 +10,7 @@
 .sectionSubtitle {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  color: var(--accent-cyan);
+  color: var(--accent-primary);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -72,7 +72,7 @@
 }
 
 .projectIcon {
-  color: var(--accent-cyan);
+  color: var(--accent-primary);
 }
 
 .links {
@@ -93,14 +93,14 @@
 }
 
 .actionIcon:hover {
-  color: var(--accent-cyan);
+  color: var(--accent-primary);
   background: rgba(56, 189, 248, 0.12);
 }
 
 .badge {
   font-size: 0.72rem;
   font-family: var(--font-mono);
-  color: var(--accent-cyan);
+  color: var(--text-accent);
   background: rgba(56, 189, 248, 0.08);
   border: 1px solid rgba(56, 189, 248, 0.2);
   align-self: flex-start;

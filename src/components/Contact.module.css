@@ -58,7 +58,7 @@
   height: 42px;
   border-radius: var(--radius-sm);
   background: rgba(56, 189, 248, 0.1);
-  color: var(--accent-cyan);
+  color: var(--accent-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +85,7 @@
 }
 
 .infoLink:hover {
-  color: var(--accent-cyan);
+  color: var(--accent-primary);
 }
 
 .copyBtn {
@@ -105,7 +105,7 @@
 
 .copyBtn:hover {
   background: rgba(56, 189, 248, 0.15);
-  color: var(--accent-cyan);
+  color: var(--accent-primary);
 }
 
 .socialRow {
@@ -129,8 +129,8 @@
 }
 
 .socialPill:hover {
-  border-color: var(--accent-cyan);
-  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  transform: scale(1.05);
 }
 
 /* Contact Form */
@@ -171,7 +171,7 @@
 
 .formInput:focus,
 .formTextarea:focus {
-  border-color: var(--accent-cyan);
+  border-color: var(--accent-primary);
 }
 
 .submitBtn {
@@ -179,19 +179,21 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  border: none;
   border-radius: var(--radius-sm);
   padding: 0.85rem;
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: opacity var(--transition-fast);
+  transition: all var(--transition-normal);
+  background: var(--accent-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--bg-primary);
 }
 
 .submitBtn:hover {
-  opacity: 0.9;
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  background: var(--bg-primary);
 }
 
 @media (max-width: 860px) {

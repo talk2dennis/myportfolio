@@ -65,15 +65,10 @@ export const Hero = () => {
 
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className={styles.ctaGroup}>
-            <motion.a
-              href="#projects"
-              className={styles.primaryBtn}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
+            <a href="#projects" className={styles.primaryBtn}>
               View Featured Work
               <FaArrowRight size={18} />
-            </motion.a>
+            </a>
 
             <motion.a
               href="/Dennis_Adigwe_CV.pdf"
@@ -125,7 +120,7 @@ export const Hero = () => {
           </div>
 
           <pre className={styles.codeSnippet}>
-            <code>
+            <code className={styles.codeContent}>
               <span className={styles.codeKeyword}>const</span> engineer =
               &#123;{"\n"}
               {"  "}name:{" "}
