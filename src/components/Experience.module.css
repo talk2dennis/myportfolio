@@ -63,11 +63,12 @@
 
 .timelineItem {
   position: relative;
+  outline: none;
 }
 
 .timelineMarker {
   position: absolute;
-  left: -2rem;
+  left: calc(-2rem + 1px);
   top: 1.5rem;
   transform: translateX(-50%);
 }
@@ -76,8 +77,10 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--accent-primary);
-  box-shadow: 0 0 10px var(--accent-shadow);
+  background: var(--text-muted);
+  transition:
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .card {
@@ -87,6 +90,9 @@
   padding: 1.75rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 .cardHeader {
@@ -101,23 +107,28 @@
 .roleTitle {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
 }
 
 .companyName {
   font-size: 0.9rem;
-  color: var(--accent-secondary);
+  color: var(--text-muted);
   font-family: var(--font-mono);
+  transition: color var(--transition-fast);
 }
 
 .periodBadge {
   font-size: 0.75rem;
   font-family: var(--font-mono);
   background: rgba(255, 255, 255, 0.05);
-  color: var(--accent-primary-active);
+  color: var(--text-muted);
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-subtle);
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .bulletList {
@@ -132,14 +143,42 @@
   align-items: flex-start;
   gap: 0.65rem;
   font-size: 0.92rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
 .bulletIcon {
-  color: var(--accent-primary-active);
+  color: var(--text-muted);
   flex-shrink: 0;
   margin-top: 2px;
+  transition: color var(--transition-fast);
+}
+
+.timelineItem:hover .timelineDot,
+.timelineItem:focus .timelineDot {
+  background: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.timelineItem:hover .card,
+.timelineItem:focus .card {
+  border-color: var(--accent-primary);
+}
+
+.timelineItem:hover .roleTitle,
+.timelineItem:focus .roleTitle,
+.timelineItem:hover .companyName,
+.timelineItem:focus .companyName,
+.timelineItem:hover .periodBadge,
+.timelineItem:focus .periodBadge,
+.timelineItem:hover .bulletIcon,
+.timelineItem:focus .bulletIcon {
+  color: var(--accent-primary);
+}
+
+.timelineItem:focus-visible .card {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
 }
 
 /* Education Grid */
@@ -218,5 +257,9 @@
   .timeline {
     margin-left: 0.5rem;
     padding-left: 1.5rem;
+  }
+
+  .timelineMarker {
+    left: calc(-1.5rem + 1px);
   }
 }

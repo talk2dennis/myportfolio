@@ -134,7 +134,7 @@ export const Experience = () => {
                 className={styles.timeline}
               >
                 {workHistory.map((item, idx) => (
-                  <div key={idx} className={styles.timelineItem}>
+                  <div key={idx} className={styles.timelineItem} tabIndex={0}>
                     <div className={styles.timelineMarker}>
                       <div className={styles.timelineDot} />
                     </div>
